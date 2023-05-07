@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const BlogCommentSchema = new Schema({
     author: { type: Schema.Types.ObjectId, ref: 'User'},
-    title: { type: String, require: true, maxLength: 100 },
-    content: { type: String, require: true, maxLength: 500 },
+    title: { type: String, maxLength: 100 },
+    content: { type: String, maxLength: 500 },
     creation_date: { type: Date, default: Date.now },
 });
 
